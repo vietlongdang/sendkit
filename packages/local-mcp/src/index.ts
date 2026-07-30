@@ -16,7 +16,7 @@ function getTelegramBotToken() {
   }
 
   return token;
-};
+}
 
 server.registerTool(
   "telegram",
@@ -26,9 +26,9 @@ server.registerTool(
     inputSchema: telegramMessageInputSchema.shape,
   },
   async (input) => {
-    const result = await sendTelegramMessage({ 
-      ...input, 
-      botToken: getTelegramBotToken()
+    const result = await sendTelegramMessage({
+      ...input,
+      botToken: getTelegramBotToken(),
     });
 
     return {
