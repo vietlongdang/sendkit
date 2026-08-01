@@ -14,50 +14,56 @@
       },
     },
     "apps/remote-mcp": {
-      "name": "@alex-dev/sendkit-remote-mcp",
+      "name": "@alexdang/sendkit-remote-mcp",
       "version": "0.0.0",
       "dependencies": {
-        "@alex-dev/sendkit-core": "workspace:*",
+        "@alexdang/sendkit-core": "0.0.0",
         "@clerk/backend": "^3.8.2",
         "@clerk/mcp-tools": "^0.5.0",
-        "@modelcontextprotocol/sdk": "^1.30.0",
+        "@modelcontextprotocol/sdk": "^1.29.0",
         "hono": "^4.12.23",
       },
     },
     "packages/cli": {
-      "name": "@alex-dev/sendkit",
+      "name": "@alexdang/sendkit",
       "version": "0.0.0",
+      "bin": {
+        "sendkit": "./dist/index.js",
+      },
       "dependencies": {
-        "@alex-dev/sendkit-core": "workspace:*",
+        "@alexdang/sendkit-core": "workspace:*",
         "commander": "^15.0.0",
         "zod": "^4.4.3",
       },
     },
     "packages/core": {
-      "name": "@alex-dev/sendkit-core",
+      "name": "@alexdang/sendkit-core",
       "version": "0.0.0",
       "dependencies": {
         "zod": "^4.4.3",
       },
     },
     "packages/local-mcp": {
-      "name": "@alex-dev/sendkit-mcp",
-      "version": "0.0.0",
+      "name": "@alexdang/sendkit-mcp",
+      "version": "0.0.1",
+      "bin": {
+        "sendkit-mcp": "./dist/index.js",
+      },
       "dependencies": {
-        "@alex-dev/sendkit-core": "workspace:*",
-        "@modelcontextprotocol/sdk": "^1.30.0",
+        "@alexdang/sendkit-core": "workspace:*",
+        "@modelcontextprotocol/sdk": "^1.29.0",
         "zod": "^4.4.3",
       },
     },
   },
   "packages": {
-    "@alex-dev/sendkit": ["@alex-dev/sendkit@workspace:packages/cli"],
+    "@alexdang/sendkit": ["@alexdang/sendkit@workspace:packages/cli"],
 
-    "@alex-dev/sendkit-core": ["@alex-dev/sendkit-core@workspace:packages/core"],
+    "@alexdang/sendkit-core": ["@alexdang/sendkit-core@workspace:packages/core"],
 
-    "@alex-dev/sendkit-mcp": ["@alex-dev/sendkit-mcp@workspace:packages/local-mcp"],
+    "@alexdang/sendkit-mcp": ["@alexdang/sendkit-mcp@workspace:packages/local-mcp"],
 
-    "@alex-dev/sendkit-remote-mcp": ["@alex-dev/sendkit-remote-mcp@workspace:apps/remote-mcp"],
+    "@alexdang/sendkit-remote-mcp": ["@alexdang/sendkit-remote-mcp@workspace:apps/remote-mcp"],
 
     "@clerk/backend": ["@clerk/backend@3.14.0", "", { "dependencies": { "@clerk/shared": "^4.25.9", "standardwebhooks": "^1.0.0", "tslib": "2.8.1" } }, "sha512-WsphTvDFHDuQilKI7dyVE5qmt7USu8qSrujAq6SqpEHbVFfNBfINDNuzxlF9M2skOTfHFfgiTE8Jjb1egIBGLg=="],
 

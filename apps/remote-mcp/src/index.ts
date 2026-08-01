@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 import { Hono, type Context } from "hono";
 import { createClerkClient } from "@clerk/backend";
 import { McpServer } from "@modelcontextprotocol/sdk/server/mcp.js";

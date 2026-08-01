@@ -1,16 +1,19 @@
 {
-  "name": "@alex-dev/sendkit-remote-mcp",
+  "name": "@alexdang/sendkit-remote-mcp",
   "version": "0.0.0",
   "private": true,
   "type": "module",
   "exports": {
     ".": "./src/index.ts"
   },
+  "scripts": {
+    "start": "bun run src/index.ts"
+  },
   "dependencies": {
     "@clerk/backend": "^3.8.2",
     "@clerk/mcp-tools": "^0.5.0",
-    "@modelcontextprotocol/sdk": "^1.30.0",
+    "@modelcontextprotocol/sdk": "^1.29.0",
     "hono": "^4.12.23",
-    "@alex-dev/sendkit-core": "workspace:*"
+    "@alexdang/sendkit-core": "0.0.0"
   }
 }
